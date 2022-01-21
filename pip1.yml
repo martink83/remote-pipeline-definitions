@@ -2,7 +2,7 @@ pipeline:
 on: "CLICK"
 refs:
 - "refs/heads/master"
-priority: "NORMAL"
+priority: "LOW"
 fail_on_prepare_env_warning: true
 actions:
 - action: "Execute: pwd"
