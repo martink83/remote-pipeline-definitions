@@ -2,7 +2,7 @@
   on: "CLICK"
   refs:
   - "refs/heads/master"
-  priority: "LOW"
+  priority: "NORMAL"
   fail_on_prepare_env_warning: true
   actions:
   - action: "Execute: pwd"
