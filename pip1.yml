@@ -1,18 +1,18 @@
-pipeline:
-on: "CLICK"
-refs:
-- "refs/heads/master"
-priority: "LOW"
-fail_on_prepare_env_warning: true
-actions:
-- action: "Execute: pwd"
-  type: "BUILD"
-  working_directory: "/buddy/test"
-  docker_image_name: "library/ubuntu"
-  docker_image_tag: "!{image_tag}"
-  execute_commands:
-  - "exit 1"
-  volume_mappings:
-  - "/:/buddy/test"
-  cache_base_image: true
-  shell: "BASH"
+- pipeline:
+  on: "CLICK"
+  refs:
+  - "refs/heads/master"
+  priority: "LOW"
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: "Execute: pwd"
+    type: "BUILD"
+    working_directory: "/buddy/test"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "!{image_tag}"
+    execute_commands:
+    - "exit 0"
+    volume_mappings:
+    - "/:/buddy/test"
+    cache_base_image: true
+    shell: "BASH"
